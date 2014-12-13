@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B56EB5E81A3D01F0001DA69D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B56EB5E71A3D01F0001DA69D /* AppDelegate.m */; };
+		B56EB5EA1A3D01F0001DA69D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B56EB5E91A3D01F0001DA69D /* main.m */; };
+		B56EB5EC1A3D01F0001DA69D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56EB5EB1A3D01F0001DA69D /* Images.xcassets */; };
+		B56EB5EF1A3D01F0001DA69D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B56EB5ED1A3D01F0001DA69D /* MainMenu.xib */; };
+		B56EB5FB1A3D01F1001DA69D /* MacVoikkoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B56EB5FA1A3D01F1001DA69D /* MacVoikkoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B56EB5F51A3D01F1001DA69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B56EB5D91A3D01EF001DA69D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B56EB5E01A3D01F0001DA69D;
+			remoteInfo = MacVoikko;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B56EB5E11A3D01F0001DA69D /* MacVoikko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacVoikko.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56EB5E51A3D01F0001DA69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B56EB5E61A3D01F0001DA69D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B56EB5E71A3D01F0001DA69D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B56EB5E91A3D01F0001DA69D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B56EB5EB1A3D01F0001DA69D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B56EB5EE1A3D01F0001DA69D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B56EB5F41A3D01F1001DA69D /* MacVoikkoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacVoikkoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56EB5F91A3D01F1001DA69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B56EB5FA1A3D01F1001DA69D /* MacVoikkoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacVoikkoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B56EB5DE1A3D01F0001DA69D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B56EB5F11A3D01F1001DA69D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B56EB5D81A3D01EF001DA69D = {
+			isa = PBXGroup;
+			children = (
+				B56EB5E31A3D01F0001DA69D /* MacVoikko */,
+				B56EB5F71A3D01F1001DA69D /* MacVoikkoTests */,
+				B56EB5E21A3D01F0001DA69D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B56EB5E21A3D01F0001DA69D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B56EB5E11A3D01F0001DA69D /* MacVoikko.app */,
+				B56EB5F41A3D01F1001DA69D /* MacVoikkoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B56EB5E31A3D01F0001DA69D /* MacVoikko */ = {
+			isa = PBXGroup;
+			children = (
+				B56EB5E61A3D01F0001DA69D /* AppDelegate.h */,
+				B56EB5E71A3D01F0001DA69D /* AppDelegate.m */,
+				B56EB5EB1A3D01F0001DA69D /* Images.xcassets */,
+				B56EB5ED1A3D01F0001DA69D /* MainMenu.xib */,
+				B56EB5E41A3D01F0001DA69D /* Supporting Files */,
+			);
+			path = MacVoikko;
+			sourceTree = "<group>";
+		};
+		B56EB5E41A3D01F0001DA69D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B56EB5E51A3D01F0001DA69D /* Info.plist */,
+				B56EB5E91A3D01F0001DA69D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B56EB5F71A3D01F1001DA69D /* MacVoikkoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B56EB5FA1A3D01F1001DA69D /* MacVoikkoTests.m */,
+				B56EB5F81A3D01F1001DA69D /* Supporting Files */,
+			);
+			path = MacVoikkoTests;
+			sourceTree = "<group>";
+		};
+		B56EB5F81A3D01F1001DA69D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B56EB5F91A3D01F1001DA69D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B56EB5E01A3D01F0001DA69D /* MacVoikko */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B56EB5FE1A3D01F2001DA69D /* Build configuration list for PBXNativeTarget "MacVoikko" */;
+			buildPhases = (
+				B56EB5DD1A3D01F0001DA69D /* Sources */,
+				B56EB5DE1A3D01F0001DA69D /* Frameworks */,
+				B56EB5DF1A3D01F0001DA69D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacVoikko;
+			productName = MacVoikko;
+			productReference = B56EB5E11A3D01F0001DA69D /* MacVoikko.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B56EB5F31A3D01F1001DA69D /* MacVoikkoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B56EB6011A3D01F2001DA69D /* Build configuration list for PBXNativeTarget "MacVoikkoTests" */;
+			buildPhases = (
+				B56EB5F01A3D01F1001DA69D /* Sources */,
+				B56EB5F11A3D01F1001DA69D /* Frameworks */,
+				B56EB5F21A3D01F1001DA69D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B56EB5F61A3D01F1001DA69D /* PBXTargetDependency */,
+			);
+			name = MacVoikkoTests;
+			productName = MacVoikkoTests;
+			productReference = B56EB5F41A3D01F1001DA69D /* MacVoikkoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B56EB5D91A3D01EF001DA69D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Voikko;
+				TargetAttributes = {
+					B56EB5E01A3D01F0001DA69D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					B56EB5F31A3D01F1001DA69D = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = B56EB5E01A3D01F0001DA69D;
+					};
+				};
+			};
+			buildConfigurationList = B56EB5DC1A3D01F0001DA69D /* Build configuration list for PBXProject "MacVoikko" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B56EB5D81A3D01EF001DA69D;
+			productRefGroup = B56EB5E21A3D01F0001DA69D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B56EB5E01A3D01F0001DA69D /* MacVoikko */,
+				B56EB5F31A3D01F1001DA69D /* MacVoikkoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B56EB5DF1A3D01F0001DA69D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B56EB5EC1A3D01F0001DA69D /* Images.xcassets in Resources */,
+				B56EB5EF1A3D01F0001DA69D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B56EB5F21A3D01F1001DA69D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B56EB5DD1A3D01F0001DA69D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B56EB5EA1A3D01F0001DA69D /* main.m in Sources */,
+				B56EB5E81A3D01F0001DA69D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B56EB5F01A3D01F1001DA69D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B56EB5FB1A3D01F1001DA69D /* MacVoikkoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B56EB5F61A3D01F1001DA69D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B56EB5E01A3D01F0001DA69D /* MacVoikko */;
+			targetProxy = B56EB5F51A3D01F1001DA69D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B56EB5ED1A3D01F0001DA69D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B56EB5EE1A3D01F0001DA69D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B56EB5FC1A3D01F1001DA69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B56EB5FD1A3D01F1001DA69D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B56EB5FF1A3D01F2001DA69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MacVoikko/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B56EB6001A3D01F2001DA69D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MacVoikko/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B56EB6021A3D01F2001DA69D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MacVoikkoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacVoikko.app/Contents/MacOS/MacVoikko";
+			};
+			name = Debug;
+		};
+		B56EB6031A3D01F2001DA69D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MacVoikkoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacVoikko.app/Contents/MacOS/MacVoikko";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B56EB5DC1A3D01F0001DA69D /* Build configuration list for PBXProject "MacVoikko" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B56EB5FC1A3D01F1001DA69D /* Debug */,
+				B56EB5FD1A3D01F1001DA69D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B56EB5FE1A3D01F2001DA69D /* Build configuration list for PBXNativeTarget "MacVoikko" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B56EB5FF1A3D01F2001DA69D /* Debug */,
+				B56EB6001A3D01F2001DA69D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B56EB6011A3D01F2001DA69D /* Build configuration list for PBXNativeTarget "MacVoikkoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B56EB6021A3D01F2001DA69D /* Debug */,
+				B56EB6031A3D01F2001DA69D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B56EB5D91A3D01EF001DA69D /* Project object */;
+}
