@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B56EB5E81A3D01F0001DA69D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B56EB5E71A3D01F0001DA69D /* AppDelegate.m */; };
 		B56EB5EA1A3D01F0001DA69D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B56EB5E91A3D01F0001DA69D /* main.m */; };
-		B56EB5EC1A3D01F0001DA69D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56EB5EB1A3D01F0001DA69D /* Images.xcassets */; };
-		B56EB5EF1A3D01F0001DA69D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B56EB5ED1A3D01F0001DA69D /* MainMenu.xib */; };
 		B56EB5FB1A3D01F1001DA69D /* MacVoikkoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B56EB5FA1A3D01F1001DA69D /* MacVoikkoTests.m */; };
 /* End PBXBuildFile section */
 
@@ -27,11 +24,7 @@
 /* Begin PBXFileReference section */
 		B56EB5E11A3D01F0001DA69D /* MacVoikko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacVoikko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56EB5E51A3D01F0001DA69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B56EB5E61A3D01F0001DA69D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B56EB5E71A3D01F0001DA69D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B56EB5E91A3D01F0001DA69D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B56EB5EB1A3D01F0001DA69D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B56EB5EE1A3D01F0001DA69D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B56EB5F41A3D01F1001DA69D /* MacVoikkoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacVoikkoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56EB5F91A3D01F1001DA69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56EB5FA1A3D01F1001DA69D /* MacVoikkoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacVoikkoTests.m; sourceTree = "<group>"; };
@@ -76,22 +69,10 @@
 		B56EB5E31A3D01F0001DA69D /* MacVoikko */ = {
 			isa = PBXGroup;
 			children = (
-				B56EB5E61A3D01F0001DA69D /* AppDelegate.h */,
-				B56EB5E71A3D01F0001DA69D /* AppDelegate.m */,
-				B56EB5EB1A3D01F0001DA69D /* Images.xcassets */,
-				B56EB5ED1A3D01F0001DA69D /* MainMenu.xib */,
-				B56EB5E41A3D01F0001DA69D /* Supporting Files */,
-			);
-			path = MacVoikko;
-			sourceTree = "<group>";
-		};
-		B56EB5E41A3D01F0001DA69D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
 				B56EB5E51A3D01F0001DA69D /* Info.plist */,
 				B56EB5E91A3D01F0001DA69D /* main.m */,
 			);
-			name = "Supporting Files";
+			path = MacVoikko;
 			sourceTree = "<group>";
 		};
 		B56EB5F71A3D01F1001DA69D /* MacVoikkoTests */ = {
@@ -191,8 +172,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B56EB5EC1A3D01F0001DA69D /* Images.xcassets in Resources */,
-				B56EB5EF1A3D01F0001DA69D /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +190,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B56EB5EA1A3D01F0001DA69D /* main.m in Sources */,
-				B56EB5E81A3D01F0001DA69D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,17 +210,6 @@
 			targetProxy = B56EB5F51A3D01F1001DA69D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		B56EB5ED1A3D01F0001DA69D /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B56EB5EE1A3D01F0001DA69D /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B56EB5FC1A3D01F1001DA69D /* Debug */ = {
@@ -328,6 +295,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MacVoikko/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -339,6 +307,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MacVoikko/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

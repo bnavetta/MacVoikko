@@ -6,8 +6,13 @@
 //  Copyright (c) 2014 Voikko. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
-int main(int argc, const char * argv[]) {
-	return NSApplicationMain(argc, argv);
+int main(int argc, const char * argv[])
+{
+	@autoreleasepool {
+		NSSpellServer* server = [[NSSpellServer alloc] init];
+		
+		[server run];
+	}
 }
