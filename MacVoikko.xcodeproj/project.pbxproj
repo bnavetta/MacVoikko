@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B55FDC2E1A3DCC8F00E3C4DA /* libhfstospell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B55FDC2C1A3DCC8F00E3C4DA /* libhfstospell.a */; };
+		B55FDC2F1A3DCC9000E3C4DA /* libvoikko.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B55FDC2D1A3DCC8F00E3C4DA /* libvoikko.a */; };
+		B55FDC311A3DCCB000E3C4DA /* libarchive.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B55FDC301A3DCCB000E3C4DA /* libarchive.dylib */; };
+		B55FDC331A3DCCB700E3C4DA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B55FDC321A3DCCB700E3C4DA /* libxml2.dylib */; };
+		B55FDC351A3DCD8900E3C4DA /* corevoikko in Resources */ = {isa = PBXBuildFile; fileRef = B55FDC341A3DCD8900E3C4DA /* corevoikko */; };
+		B55FDC381A3DCE5600E3C4DA /* Voikko.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FDC371A3DCE5600E3C4DA /* Voikko.m */; };
 		B56EB5EA1A3D01F0001DA69D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B56EB5E91A3D01F0001DA69D /* main.m */; };
 		B56EB5FB1A3D01F1001DA69D /* MacVoikkoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B56EB5FA1A3D01F1001DA69D /* MacVoikkoTests.m */; };
 /* End PBXBuildFile section */
@@ -22,6 +28,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B55FDC2C1A3DCC8F00E3C4DA /* libhfstospell.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libhfstospell.a; sourceTree = "<group>"; };
+		B55FDC2D1A3DCC8F00E3C4DA /* libvoikko.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvoikko.a; sourceTree = "<group>"; };
+		B55FDC301A3DCCB000E3C4DA /* libarchive.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libarchive.dylib; path = usr/lib/libarchive.dylib; sourceTree = SDKROOT; };
+		B55FDC321A3DCCB700E3C4DA /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		B55FDC341A3DCD8900E3C4DA /* corevoikko */ = {isa = PBXFileReference; lastKnownFileType = folder; path = corevoikko; sourceTree = "<group>"; };
+		B55FDC361A3DCE5600E3C4DA /* Voikko.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voikko.h; sourceTree = "<group>"; };
+		B55FDC371A3DCE5600E3C4DA /* Voikko.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voikko.m; sourceTree = "<group>"; };
 		B56EB5E11A3D01F0001DA69D /* MacVoikko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacVoikko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56EB5E51A3D01F0001DA69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56EB5E91A3D01F0001DA69D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -35,6 +48,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55FDC331A3DCCB700E3C4DA /* libxml2.dylib in Frameworks */,
+				B55FDC311A3DCCB000E3C4DA /* libarchive.dylib in Frameworks */,
+				B55FDC2F1A3DCC9000E3C4DA /* libvoikko.a in Frameworks */,
+				B55FDC2E1A3DCC8F00E3C4DA /* libhfstospell.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,12 +65,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B55FDC2B1A3DCC8E00E3C4DA /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				B55FDC2C1A3DCC8F00E3C4DA /* libhfstospell.a */,
+				B55FDC2D1A3DCC8F00E3C4DA /* libvoikko.a */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
 		B56EB5D81A3D01EF001DA69D = {
 			isa = PBXGroup;
 			children = (
+				B55FDC321A3DCCB700E3C4DA /* libxml2.dylib */,
+				B55FDC301A3DCCB000E3C4DA /* libarchive.dylib */,
 				B56EB5E31A3D01F0001DA69D /* MacVoikko */,
 				B56EB5F71A3D01F1001DA69D /* MacVoikkoTests */,
 				B56EB5E21A3D01F0001DA69D /* Products */,
+				B55FDC2B1A3DCC8E00E3C4DA /* libs */,
+				B55FDC341A3DCD8900E3C4DA /* corevoikko */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +101,8 @@
 			children = (
 				B56EB5E51A3D01F0001DA69D /* Info.plist */,
 				B56EB5E91A3D01F0001DA69D /* main.m */,
+				B55FDC361A3DCE5600E3C4DA /* Voikko.h */,
+				B55FDC371A3DCE5600E3C4DA /* Voikko.m */,
 			);
 			path = MacVoikko;
 			sourceTree = "<group>";
@@ -172,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55FDC351A3DCD8900E3C4DA /* corevoikko in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55FDC381A3DCE5600E3C4DA /* Voikko.m in Sources */,
 				B56EB5EA1A3D01F0001DA69D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,8 +329,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MacVoikko/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = corevoikko/libvoikko/src;
 			};
 			name = Debug;
 		};
@@ -307,8 +346,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = MacVoikko/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = corevoikko/libvoikko/src;
 			};
 			name = Release;
 		};
@@ -367,6 +411,7 @@
 				B56EB6001A3D01F2001DA69D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B56EB6011A3D01F2001DA69D /* Build configuration list for PBXNativeTarget "MacVoikkoTests" */ = {
 			isa = XCConfigurationList;
@@ -375,6 +420,7 @@
 				B56EB6031A3D01F2001DA69D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

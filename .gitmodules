@@ -1,0 +1,3 @@
+[submodule "corevoikko"]
+	path = corevoikko
+	url = https://github.com/voikko/corevoikko.git
