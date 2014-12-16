@@ -16,21 +16,26 @@ int main(int argc, const char * argv[])
 		VoikkoSpellChecker* checker = [[VoikkoSpellChecker alloc] init];
 		
 		NSSpellServer* server = [[NSSpellServer alloc] init];
-		
+		int registeredLanguages = 0;
 		for(NSString* language in [checker supportedLanguages])
 		{
+			NSLog(@"Registering %@", language);
 			if([server registerLanguage:language byVendor:VoikkoVendor])
 			{
-				NSLog(@"Registered support for %@", language);
-			}
-			else
-			{
-				NSLog(@"Failed to register support for %@", language);
+				registeredLanguages++;
 			}
 		}
 		
-		server.delegate = checker;
-		
-		[server run];
+		if(registeredLanguages > 0)
+		{
+			NSLog(@"Registered %d languages", registeredLanguages);
+			[server setDelegate:checker];
+			[server run];
+			NSLog(@"Unexpected death of MacVoikko spell checker");
+		}
+		else
+		{
+			NSLog(@"Unable to register any languages for MacVoikko spell checker");
+		}
 	}
 }

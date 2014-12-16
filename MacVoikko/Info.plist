@@ -29,6 +29,28 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2014 Voikko. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
-	<string>NSApplication</string>
+	<string>VoikkoSpellChecker</string>
+	<key>LSBackgroundOnly</key>
+	<string>1</string>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSExecutable</key>
+			<string>MacVoikko</string>
+			<key>NSLanguages</key>
+			<array>
+				<string>en</string>
+				<string>fi</string>
+				<string>Multilingual</string>
+				<string>*</string>
+			</array>
+			<key>NSMenuItem</key>
+			<dict/>
+			<key>NSPortName</key>
+			<string>MacVoikko</string>
+			<key>NSSpellChecker</key>
+			<string>MacVoikko</string>
+		</dict>
+	</array>
 </dict>
 </plist>
