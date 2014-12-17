@@ -14,6 +14,7 @@
 		B55FDC3B1A3DD06700E3C4DA /* CocoaVoikko.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FDC3A1A3DD06700E3C4DA /* CocoaVoikko.m */; };
 		B56EB5EA1A3D01F0001DA69D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B56EB5E91A3D01F0001DA69D /* main.m */; };
 		B56EB5FB1A3D01F1001DA69D /* MacVoikkoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B56EB5FA1A3D01F1001DA69D /* MacVoikkoTests.m */; };
+		B5BC72B11A41CD2F00C3877E /* PlistUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BC72B01A41CD2F00C3877E /* PlistUpdater.m */; };
 		B5ED17EF1A3E86610054A8C7 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5ED17EE1A3E86610054A8C7 /* libstdc++.dylib */; };
 		B5ED17F11A3E87550054A8C7 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5ED17F01A3E87540054A8C7 /* libc++.dylib */; };
 		B5ED17F41A3E8AAF0054A8C7 /* VoikkoSpellChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = B5ED17F31A3E8AAF0054A8C7 /* VoikkoSpellChecker.m */; };
@@ -43,6 +44,8 @@
 		B56EB5F41A3D01F1001DA69D /* MacVoikkoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacVoikkoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56EB5F91A3D01F1001DA69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56EB5FA1A3D01F1001DA69D /* MacVoikkoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacVoikkoTests.m; sourceTree = "<group>"; };
+		B5BC72AF1A41CD2F00C3877E /* PlistUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistUpdater.h; sourceTree = "<group>"; };
+		B5BC72B01A41CD2F00C3877E /* PlistUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistUpdater.m; sourceTree = "<group>"; };
 		B5ED17EE1A3E86610054A8C7 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		B5ED17F01A3E87540054A8C7 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		B5ED17F21A3E8AAF0054A8C7 /* VoikkoSpellChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoikkoSpellChecker.h; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				B55FDC3A1A3DD06700E3C4DA /* CocoaVoikko.m */,
 				B5ED17F21A3E8AAF0054A8C7 /* VoikkoSpellChecker.h */,
 				B5ED17F31A3E8AAF0054A8C7 /* VoikkoSpellChecker.m */,
+				B5BC72AF1A41CD2F00C3877E /* PlistUpdater.h */,
+				B5BC72B01A41CD2F00C3877E /* PlistUpdater.m */,
 			);
 			path = MacVoikko;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 			files = (
 				B55FDC3B1A3DD06700E3C4DA /* CocoaVoikko.m in Sources */,
 				B56EB5EA1A3D01F0001DA69D /* main.m in Sources */,
+				B5BC72B11A41CD2F00C3877E /* PlistUpdater.m in Sources */,
 				B5ED17F41A3E8AAF0054A8C7 /* VoikkoSpellChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

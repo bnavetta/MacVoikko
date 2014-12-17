@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 
 #import "VoikkoSpellChecker.h"
+#import "PlistUpdater.h"
 
 #define VoikkoVendor @"Voikko"
 
@@ -15,9 +16,14 @@ int main(int argc, const char * argv[])
 		
 		VoikkoSpellChecker* checker = [[VoikkoSpellChecker alloc] init];
 		
+		NSArray* languages = [checker supportedLanguages];
+		
+		[PlistUpdater registerLanguages:languages];
+		[PlistUpdater refreshServices];
+		
 		NSSpellServer* server = [[NSSpellServer alloc] init];
 		int registeredLanguages = 0;
-		for(NSString* language in [checker supportedLanguages])
+		for(NSString* language in languages)
 		{
 			NSLog(@"Registering %@", language);
 			if([server registerLanguage:language byVendor:VoikkoVendor])
