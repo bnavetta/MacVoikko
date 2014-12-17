@@ -41,8 +41,6 @@
 			<array>
 				<string>en</string>
 				<string>fi</string>
-				<string>Multilingual</string>
-				<string>*</string>
 			</array>
 			<key>NSMenuItem</key>
 			<dict/>
