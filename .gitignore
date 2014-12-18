@@ -1,2 +1,4 @@
-hfst-code/
-libs/
+thirdparty/build/
+thirdparty/libarchive-build/
+thirdparty/tinyxml2-build/
+thirdparty/hfst/

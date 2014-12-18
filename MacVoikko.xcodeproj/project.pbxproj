@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B55FDC2E1A3DCC8F00E3C4DA /* libhfstospell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B55FDC2C1A3DCC8F00E3C4DA /* libhfstospell.a */; };
-		B55FDC2F1A3DCC9000E3C4DA /* libvoikko.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B55FDC2D1A3DCC8F00E3C4DA /* libvoikko.a */; };
-		B55FDC331A3DCCB700E3C4DA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B55FDC321A3DCCB700E3C4DA /* libxml2.dylib */; };
-		B55FDC351A3DCD8900E3C4DA /* corevoikko in Resources */ = {isa = PBXBuildFile; fileRef = B55FDC341A3DCD8900E3C4DA /* corevoikko */; };
 		B55FDC3B1A3DD06700E3C4DA /* CocoaVoikko.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FDC3A1A3DD06700E3C4DA /* CocoaVoikko.m */; };
 		B56EB5EA1A3D01F0001DA69D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B56EB5E91A3D01F0001DA69D /* main.m */; };
 		B56EB5FB1A3D01F1001DA69D /* MacVoikkoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B56EB5FA1A3D01F1001DA69D /* MacVoikkoTests.m */; };
+		B59B23B01A4379200040A2FC /* libvoikko.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B59B23AF1A4379200040A2FC /* libvoikko.dylib */; };
+		B59B23B21A4379490040A2FC /* libarchive.14.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B59B23B11A4379490040A2FC /* libarchive.14.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B59B23B41A4379570040A2FC /* libhfstospell.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B59B23B31A4379570040A2FC /* libhfstospell.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B59B23B61A4379780040A2FC /* libtinyxml2.2.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B59B23B51A4379780040A2FC /* libtinyxml2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		B59B23B81A4379830040A2FC /* libvoikko.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = B59B23B71A4379820040A2FC /* libvoikko.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B5BC72B11A41CD2F00C3877E /* PlistUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BC72B01A41CD2F00C3877E /* PlistUpdater.m */; };
 		B5ED17EF1A3E86610054A8C7 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5ED17EE1A3E86610054A8C7 /* libstdc++.dylib */; };
 		B5ED17F11A3E87550054A8C7 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5ED17F01A3E87540054A8C7 /* libc++.dylib */; };
@@ -30,12 +31,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B59B23AE1A4378CF0040A2FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B59B23B21A4379490040A2FC /* libarchive.14.dylib in CopyFiles */,
+				B59B23B41A4379570040A2FC /* libhfstospell.dylib in CopyFiles */,
+				B59B23B61A4379780040A2FC /* libtinyxml2.2.dylib in CopyFiles */,
+				B59B23B81A4379830040A2FC /* libvoikko.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		B55FDC2C1A3DCC8F00E3C4DA /* libhfstospell.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libhfstospell.a; sourceTree = "<group>"; };
-		B55FDC2D1A3DCC8F00E3C4DA /* libvoikko.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvoikko.a; sourceTree = "<group>"; };
 		B55FDC301A3DCCB000E3C4DA /* libarchive.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libarchive.dylib; path = usr/lib/libarchive.dylib; sourceTree = SDKROOT; };
 		B55FDC321A3DCCB700E3C4DA /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		B55FDC341A3DCD8900E3C4DA /* corevoikko */ = {isa = PBXFileReference; lastKnownFileType = folder; path = corevoikko; sourceTree = "<group>"; };
 		B55FDC391A3DD06700E3C4DA /* CocoaVoikko.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaVoikko.h; sourceTree = "<group>"; };
 		B55FDC3A1A3DD06700E3C4DA /* CocoaVoikko.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaVoikko.m; sourceTree = "<group>"; };
 		B56EB5E11A3D01F0001DA69D /* MacVoikko.service */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacVoikko.service; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,8 +58,14 @@
 		B56EB5F41A3D01F1001DA69D /* MacVoikkoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacVoikkoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56EB5F91A3D01F1001DA69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56EB5FA1A3D01F1001DA69D /* MacVoikkoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacVoikkoTests.m; sourceTree = "<group>"; };
+		B59B23AF1A4379200040A2FC /* libvoikko.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libvoikko.dylib; path = thirdparty/build/lib/libvoikko.dylib; sourceTree = "<group>"; };
+		B59B23B11A4379490040A2FC /* libarchive.14.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libarchive.14.dylib; path = thirdparty/build/lib/libarchive.14.dylib; sourceTree = "<group>"; };
+		B59B23B31A4379570040A2FC /* libhfstospell.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libhfstospell.dylib; path = thirdparty/build/lib/libhfstospell.dylib; sourceTree = "<group>"; };
+		B59B23B51A4379780040A2FC /* libtinyxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtinyxml2.2.dylib; path = thirdparty/build/lib/libtinyxml2.2.dylib; sourceTree = "<group>"; };
+		B59B23B71A4379820040A2FC /* libvoikko.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libvoikko.dylib; path = thirdparty/build/lib/libvoikko.dylib; sourceTree = "<group>"; };
 		B5BC72AF1A41CD2F00C3877E /* PlistUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistUpdater.h; sourceTree = "<group>"; };
 		B5BC72B01A41CD2F00C3877E /* PlistUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistUpdater.m; sourceTree = "<group>"; };
+		B5E8F7101A4375C300BA4D2E /* thirdparty */ = {isa = PBXFileReference; lastKnownFileType = folder; path = thirdparty; sourceTree = "<group>"; };
 		B5ED17EE1A3E86610054A8C7 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		B5ED17F01A3E87540054A8C7 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		B5ED17F21A3E8AAF0054A8C7 /* VoikkoSpellChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoikkoSpellChecker.h; sourceTree = "<group>"; };
@@ -59,9 +79,7 @@
 			files = (
 				B5ED17F11A3E87550054A8C7 /* libc++.dylib in Frameworks */,
 				B5ED17EF1A3E86610054A8C7 /* libstdc++.dylib in Frameworks */,
-				B55FDC331A3DCCB700E3C4DA /* libxml2.dylib in Frameworks */,
-				B55FDC2F1A3DCC9000E3C4DA /* libvoikko.a in Frameworks */,
-				B55FDC2E1A3DCC8F00E3C4DA /* libhfstospell.a in Frameworks */,
+				B59B23B01A4379200040A2FC /* libvoikko.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,18 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B55FDC2B1A3DCC8E00E3C4DA /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				B55FDC2C1A3DCC8F00E3C4DA /* libhfstospell.a */,
-				B55FDC2D1A3DCC8F00E3C4DA /* libvoikko.a */,
-			);
-			path = libs;
-			sourceTree = "<group>";
-		};
 		B56EB5D81A3D01EF001DA69D = {
 			isa = PBXGroup;
 			children = (
+				B59B23B71A4379820040A2FC /* libvoikko.dylib */,
+				B59B23B51A4379780040A2FC /* libtinyxml2.2.dylib */,
+				B59B23B31A4379570040A2FC /* libhfstospell.dylib */,
+				B59B23B11A4379490040A2FC /* libarchive.14.dylib */,
+				B59B23AF1A4379200040A2FC /* libvoikko.dylib */,
 				B5ED17F01A3E87540054A8C7 /* libc++.dylib */,
 				B5ED17EE1A3E86610054A8C7 /* libstdc++.dylib */,
 				B55FDC321A3DCCB700E3C4DA /* libxml2.dylib */,
@@ -94,8 +108,7 @@
 				B56EB5E31A3D01F0001DA69D /* MacVoikko */,
 				B56EB5F71A3D01F1001DA69D /* MacVoikkoTests */,
 				B56EB5E21A3D01F0001DA69D /* Products */,
-				B55FDC2B1A3DCC8E00E3C4DA /* libs */,
-				B55FDC341A3DCD8900E3C4DA /* corevoikko */,
+				B5E8F7101A4375C300BA4D2E /* thirdparty */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B56EB5FE1A3D01F2001DA69D /* Build configuration list for PBXNativeTarget "MacVoikko" */;
 			buildPhases = (
+				B52503761A4274E700C157B4 /* ShellScript */,
 				B56EB5DD1A3D01F0001DA69D /* Sources */,
 				B56EB5DE1A3D01F0001DA69D /* Frameworks */,
 				B56EB5DF1A3D01F0001DA69D /* Resources */,
+				B59B23AE1A4378CF0040A2FC /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -220,7 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B55FDC351A3DCD8900E3C4DA /* corevoikko in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +246,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B52503761A4274E700C157B4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${SOURCE_ROOT}/thirdparty\n./build.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B56EB5DD1A3D01F0001DA69D /* Sources */ = {
@@ -348,18 +378,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/libs",
-					/usr/local/lib,
-					/usr/local/opt/libarchive/lib,
+					"$(PROJECT_DIR)/thirdparty/build/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				OTHER_LDFLAGS = (
-					"-lglibmm-2.4",
-					"-lxml++-2.6",
-					"-larchive",
-				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = corevoikko/libvoikko/src;
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/thirdparty/build/include";
 				WRAPPER_EXTENSION = service;
 			};
 			name = Debug;
@@ -372,18 +395,11 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/libs",
-					/usr/local/lib,
-					/usr/local/opt/libarchive/lib,
+					"$(PROJECT_DIR)/thirdparty/build/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				OTHER_LDFLAGS = (
-					"-lglibmm-2.4",
-					"-lxml++-2.6",
-					"-larchive",
-				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = corevoikko/libvoikko/src;
+				USER_HEADER_SEARCH_PATHS = "$(SOURCE_ROOT)/thirdparty/build/include";
 				WRAPPER_EXTENSION = service;
 			};
 			name = Release;
@@ -404,7 +420,7 @@
 				INFOPLIST_FILE = MacVoikkoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacVoikko.app/Contents/MacOS/MacVoikko";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacVoikko.service/Contents/MacOS/MacVoikko";
 			};
 			name = Debug;
 		};
@@ -420,7 +436,7 @@
 				INFOPLIST_FILE = MacVoikkoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacVoikko.app/Contents/MacOS/MacVoikko";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacVoikko.service/Contents/MacOS/MacVoikko";
 			};
 			name = Release;
 		};

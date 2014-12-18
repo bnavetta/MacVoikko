@@ -1,3 +1,9 @@
-[submodule "corevoikko"]
-	path = corevoikko
+[submodule "thirdparty/libarchive"]
+	path = thirdparty/libarchive
+	url = https://github.com/libarchive/libarchive.git
+[submodule "thirdparty/tinyxml2"]
+	path = thirdparty/tinyxml2
+	url = https://github.com/leethomason/tinyxml2.git
+[submodule "thirdparty/corevoikko"]
+	path = thirdparty/corevoikko
 	url = https://github.com/voikko/corevoikko.git

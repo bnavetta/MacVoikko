@@ -4,7 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "voikko.h"
+#import "libvoikko/voikko.h"
 
 #define VoikkoErrorDomain @"VoikkoError"
 

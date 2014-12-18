@@ -4,7 +4,6 @@
 //
 
 #import "CocoaVoikko.h"
-#import "voikko.h"
 
 @implementation CocoaVoikko
 {
