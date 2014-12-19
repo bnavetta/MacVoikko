@@ -8,11 +8,11 @@ and is currently a work in progress.
 
 ### Building
 
-All required libraries are built automatically to ensure portability. Most are
-located as submodules in the `thirdparty` directory, and those that do not use
-Git are cloned during the build process. The build script
-(`thirdparty/build.sh`) is run from Xcode and builds all libraries in the proper
-order.
+Dependencies are located under the `thirdparty` directory. Most are Git
+submodules, and some are cloned during the build process. To build dependencies, run
+`thirdparty/build.sh`. This script is also run during Xcode's build process, but
+if execution fails, running outside of Xcode (from the `thirdparty` directory)
+may be more successful, or at least provide more helpful error messages.
 
 The project can then be built from Xcode, and the `install` script (which
 currently requires xctool) will install the service into `~/Library/Services`
