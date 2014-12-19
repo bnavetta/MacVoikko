@@ -2,6 +2,9 @@
 
 ROOT="$PWD"
 
+# set by Xcode, causes conflicts
+unset PROJECT
+
 export PKG_CONFIG_PATH="$ROOT/build/lib/pkgconfig"
 
 echo "\n** Building libarchive **\n"
