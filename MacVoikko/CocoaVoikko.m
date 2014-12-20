@@ -47,9 +47,11 @@
 	size_t offset = 0;
 	size_t tokenLen = 0;
 	
-	while(textLen > 0)
+	enum voikko_token_type tokenType;
+	while(tokenType != TOKEN_NONE)
 	{
-		enum voikko_token_type tokenType = voikkoNextTokenCstr(handle, cText + offset, textLen, &tokenLen);
+		tokenType = voikkoNextTokenCstr(handle, cText + offset, textLen, &tokenLen);
+		
 		NSString* token = [[NSString alloc] initWithBytes:cText + offset length:tokenLen - offset encoding:NSUTF8StringEncoding];
 		BOOL keepGoing = callback(tokenType, token, NSMakeRange(offset, tokenLen));
 	
@@ -72,6 +74,7 @@
 	__block NSRange range;
 	__block int wc = 0;
 	[self enumerateTokens:text withBlock:^BOOL(enum voikko_token_type tokenType, NSString* token, NSRange tokenLoc) {
+		NSLog(@"Token '%@' of type %d at %@", token, tokenType, NSStringFromRange(tokenLoc));
 		if(tokenType == TOKEN_WORD)
 		{
 			wc++;
