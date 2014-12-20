@@ -51,9 +51,11 @@
 	while(tokenType != TOKEN_NONE)
 	{
 		tokenType = voikkoNextTokenCstr(handle, cText + offset, textLen, &tokenLen);
+		NSRange tokenRange = NSMakeRange(offset, tokenLen);
+		NSString* token = [text substringWithRange:tokenRange];
 		
-		NSString* token = [[NSString alloc] initWithBytes:cText + offset length:tokenLen - offset encoding:NSUTF8StringEncoding];
-		BOOL keepGoing = callback(tokenType, token, NSMakeRange(offset, tokenLen));
+//		NSString* token = [[NSString alloc] initWithBytes:cText + offset length:tokenLen - offset encoding:NSUTF8StringEncoding];
+		BOOL keepGoing = callback(tokenType, token, tokenRange);
 	
 		offset += tokenLen;
 		
@@ -71,7 +73,7 @@
 
 - (NSRange)nextMisspelledWord:(NSString *)text wordCount:(NSInteger *)wordCount
 {
-	__block NSRange range;
+	__block NSRange range = NSMakeRange(NSNotFound, 0);
 	__block int wc = 0;
 	[self enumerateTokens:text withBlock:^BOOL(enum voikko_token_type tokenType, NSString* token, NSRange tokenLoc) {
 		NSLog(@"Token '%@' of type %d at %@", token, tokenType, NSStringFromRange(tokenLoc));
@@ -81,6 +83,7 @@
 			int spelling = [self checkSpelling:token];
 			if(spelling == VOIKKO_SPELL_FAILED)
 			{
+				NSLog(@"Misspelled word '%@' at %@", token, NSStringFromRange(tokenLoc));
 				range = tokenLoc;
 				return NO;
 			}
