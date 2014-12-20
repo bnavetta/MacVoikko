@@ -32,7 +32,7 @@ if [[ ! -f hfst/hfst-ospell/hfst-ospell ]]; then
 	svn checkout svn://svn.code.sf.net/p/hfst/code/trunk hfst
 	cd hfst/hfst-ospell
 	[[ -f configure ]] || ./autogen.sh
-	./configure --prefix="$ROOT/build" --enable-zhfst --with-tinyxml2
+	./configure --prefix="$ROOT/build" --enable-zhfst --with-tinyxml2 --without-libxmlpp
 	make all install
 	cd "$ROOT"
 	install_name_tool -id @rpath/libhfstospell.dylib build/lib/libhfstospell.4.dylib
