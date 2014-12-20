@@ -38,7 +38,7 @@
 //		[languages addObject:languageName];
 //	}
 //	return languages;
-	return [CocoaVoikko spellingLanguagesAtPath:nil];
+	return [CocoaVoikko spellingLanguages];
 }
 
 - (NSRange)spellServer:(NSSpellServer *)sender findMisspelledWordInString:(NSString *)stringToCheck language:(NSString *)language wordCount:(NSInteger *)wordCount countOnly:(BOOL)countOnly
@@ -62,14 +62,14 @@
 {
 	NSError* error = nil;
 	NSMutableDictionary* handles = [NSMutableDictionary dictionary];
-	for(NSString* languageCode in [CocoaVoikko spellingLanguagesAtPath:nil])
+	for(NSString* languageCode in [CocoaVoikko spellingLanguages])
 	{
 		NSString* languageName = [VoikkoSpellChecker languageName:languageCode];
 		CocoaVoikko* handle = [[CocoaVoikko alloc] initWithLangcode:languageCode error:&error];
 		
 		if(handle == nil)
 		{
-			NSLog(@"Unable to create Voikko handle for language %@", languageCode);
+			NSLog(@"Unable to create Voikko handle for language %@: %@", languageCode, error);
 		}
 		else
 		{

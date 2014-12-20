@@ -34,7 +34,10 @@
 
 - (void)dealloc
 {
-	voikkoTerminate(handle);
+	if(handle)
+	{
+		voikkoTerminate(handle);
+	}
 }
 
 - (void)enumerateTokens:(NSString *)text withBlock:(TokenCallback)callback
@@ -113,6 +116,16 @@
 	voikkoFreeCstrArray(languageCodes);
 	
 	return languages;
+}
+
++ (NSArray*)spellingLanguages
+{
+	return [CocoaVoikko spellingLanguagesAtPath:[[[CocoaVoikko includedDictionariesPath] absoluteURL] path]];
+}
+
++ (NSURL*)includedDictionariesPath
+{
+	return [[[NSBundle mainBundle] resourceURL] URLByAppendingPathComponent:@"Dictionaries" isDirectory:YES];
 }
 
 @end

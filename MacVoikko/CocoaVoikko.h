@@ -46,4 +46,8 @@ typedef BOOL (^TokenCallback)(enum voikko_token_type tokenType, NSString* token,
 
 + (NSArray*)spellingLanguagesAtPath:(NSString*)path;
 
++ (NSArray*)spellingLanguages;
+
++ (NSURL*)includedDictionariesPath;
+
 @end
