@@ -76,7 +76,6 @@
 	__block NSRange range = NSMakeRange(NSNotFound, 0);
 	__block int wc = 0;
 	[self enumerateTokens:text withBlock:^BOOL(enum voikko_token_type tokenType, NSString* token, NSRange tokenLoc) {
-		NSLog(@"Token '%@' of type %d at %@", token, tokenType, NSStringFromRange(tokenLoc));
 		if(tokenType == TOKEN_WORD)
 		{
 			wc++;

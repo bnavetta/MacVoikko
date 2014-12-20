@@ -49,12 +49,17 @@
 	CocoaVoikko* handle = self.handles[languageName];
 	if(handle != nil)
 	{
+		if(countOnly)
+		{
+			*wordCount = [handle wordCount:stringToCheck];
+			return NSMakeRange(NSNotFound, 0);
+		}
 		return [handle nextMisspelledWord:stringToCheck wordCount:wordCount];
 	}
 	else
 	{
 		NSLog(@"Unknown language: %@", language);
-		return NSMakeRange(0, 0);
+		return NSMakeRange(NSNotFound, 0);
 	}
 }
 
