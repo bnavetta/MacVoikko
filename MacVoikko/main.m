@@ -8,7 +8,7 @@
 #import "VoikkoSpellChecker.h"
 #import "PlistUpdater.h"
 
-#define VoikkoVendor @"Voikko"
+#define VoikkoVendor @"MacVoikko"
 
 int main(int argc, const char * argv[])
 {
