@@ -69,7 +69,7 @@
 		
 		if(handle == nil)
 		{
-			NSLog(@"Unable to create Voikko handle for language %@: %@", languageCode, error);
+			NSLog(@"Unable to create Voikko handle for language %@: %@", languageCode, error.localizedDescription);
 		}
 		else
 		{

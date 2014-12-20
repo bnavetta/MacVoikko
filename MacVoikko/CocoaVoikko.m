@@ -29,7 +29,7 @@
 
 - (instancetype)initWithLangcode:(NSString *)langCode error:(NSError *__autoreleasing *)error
 {
-	return [self initWithLangcode:langCode andPath:nil error:error];
+	return [self initWithLangcode:langCode andPath:[[[CocoaVoikko includedDictionariesPath] absoluteURL] path] error:error];
 }
 
 - (void)dealloc

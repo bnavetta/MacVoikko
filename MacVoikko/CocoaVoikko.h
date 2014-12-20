@@ -27,7 +27,7 @@ typedef BOOL (^TokenCallback)(enum voikko_token_type tokenType, NSString* token,
 
 /**
  *	Initialize a Voikko instance
- *  No additional search paths will be used
+ *  The default bundled dictionary location will be added to the search path
  *
  *	@param langCode the BCP 47 language tag for the language to be used
  *	@param error    this will be set to a NSError instance if the call to voikkoInit fails
