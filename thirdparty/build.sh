@@ -51,3 +51,15 @@ if [[ ! -f build/lib/libvoikko.dylib ]]; then
 	install_name_tool -id @rpath/libvoikko.dylib build/lib/libvoikko.1.dylib
 	install_name_tool -id @rpath/libvoikko.dylib build/lib/libvoikko.dylib
 fi
+
+echo "\n** Building suomimalaga **\n"
+
+which malmake 2>&1 > /dev/null
+if [[ $? -eq 0 ]]; then
+	cd corevoikko/suomimalaga
+	make voikko
+	make voikko-install DESTDIR="$ROOT/../Dictionaries"
+	cd "$ROOT"
+else
+	echo "Malaga not installed. Using prebuilt dictionaries"
+fi
