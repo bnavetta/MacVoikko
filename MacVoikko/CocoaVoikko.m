@@ -54,7 +54,6 @@
 		NSRange tokenRange = NSMakeRange(offset, tokenLen);
 		NSString* token = [text substringWithRange:tokenRange];
 		
-//		NSString* token = [[NSString alloc] initWithBytes:cText + offset length:tokenLen - offset encoding:NSUTF8StringEncoding];
 		BOOL keepGoing = callback(tokenType, token, tokenRange);
 	
 		offset += tokenLen;
@@ -82,7 +81,6 @@
 			int spelling = [self checkSpelling:token];
 			if(spelling == VOIKKO_SPELL_FAILED)
 			{
-				NSLog(@"Misspelled word '%@' at %@", token, NSStringFromRange(tokenLoc));
 				range = tokenLoc;
 				return NO;
 			}
@@ -107,6 +105,24 @@
 	}];
 	
 	return wc;
+}
+
+- (NSArray *)suggestionsForWord:(NSString *)word
+{
+	char** cSuggestions = voikkoSuggestCstr(handle, [word UTF8String]);
+	NSMutableArray* suggestions = [NSMutableArray array];
+	
+	if(cSuggestions)
+	{
+		for(char** suggestionPtr = cSuggestions; *suggestionPtr != NULL; suggestionPtr++)
+		{
+			NSString* suggestion = [NSString stringWithUTF8String:*suggestionPtr];
+			[suggestions addObject:suggestion];
+		}
+		voikkoFreeCstrArray(cSuggestions);
+	}
+	
+	return suggestions;
 }
 
 + (NSArray *)spellingLanguagesAtPath:(NSString*)path

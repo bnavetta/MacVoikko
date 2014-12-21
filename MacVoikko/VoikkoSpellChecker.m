@@ -41,10 +41,27 @@
 	return [CocoaVoikko spellingLanguages];
 }
 
+- (NSArray *)spellServer:(NSSpellServer *)sender suggestGuessesForWord:(NSString *)word inLanguage:(NSString *)language
+{
+	NSString* languageName = [VoikkoSpellChecker languageName:language];
+	NSLog(@"Finding suggestions for '%@' in %@ (%@)", word, languageName, language);
+	
+	CocoaVoikko* handle = self.handles[languageName];
+	if(handle != nil)
+	{
+		return [handle suggestionsForWord:word];
+	}
+	else
+	{
+		NSLog(@"Unknown language: %@", language);
+		return [NSArray array];
+	}
+}
+
 - (NSRange)spellServer:(NSSpellServer *)sender findMisspelledWordInString:(NSString *)stringToCheck language:(NSString *)language wordCount:(NSInteger *)wordCount countOnly:(BOOL)countOnly
 {
 	NSString* languageName = [VoikkoSpellChecker languageName:language];
-	NSLog(@"Find misspelled word in '%@' (language %@, %@)", stringToCheck, language, languageName);
+	NSLog(@"Finding misspelled word in '%@' (language %@, %@)", stringToCheck, language, languageName);
 	
 	CocoaVoikko* handle = self.handles[languageName];
 	if(handle != nil)
@@ -54,6 +71,8 @@
 			*wordCount = [handle wordCount:stringToCheck];
 			return NSMakeRange(NSNotFound, 0);
 		}
+		
+		// TODO: handle user dictionary
 		return [handle nextMisspelledWord:stringToCheck wordCount:wordCount];
 	}
 	else
