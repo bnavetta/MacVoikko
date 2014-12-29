@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B54587261A45ACE0003FEA3C /* Dictionaries in Resources */ = {isa = PBXBuildFile; fileRef = B54587251A45ACDF003FEA3C /* Dictionaries */; };
 		B55FDC3B1A3DD06700E3C4DA /* CocoaVoikko.m in Sources */ = {isa = PBXBuildFile; fileRef = B55FDC3A1A3DD06700E3C4DA /* CocoaVoikko.m */; };
 		B56EB5EA1A3D01F0001DA69D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B56EB5E91A3D01F0001DA69D /* main.m */; };
 		B56EB5FB1A3D01F1001DA69D /* MacVoikkoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B56EB5FA1A3D01F1001DA69D /* MacVoikkoTests.m */; };
@@ -48,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B54587251A45ACDF003FEA3C /* Dictionaries */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Dictionaries; sourceTree = "<group>"; };
 		B55FDC301A3DCCB000E3C4DA /* libarchive.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libarchive.dylib; path = usr/lib/libarchive.dylib; sourceTree = SDKROOT; };
 		B55FDC321A3DCCB700E3C4DA /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		B55FDC391A3DD06700E3C4DA /* CocoaVoikko.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaVoikko.h; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				B56EB5E31A3D01F0001DA69D /* MacVoikko */,
 				B56EB5F71A3D01F1001DA69D /* MacVoikkoTests */,
 				B56EB5E21A3D01F0001DA69D /* Products */,
+				B54587251A45ACDF003FEA3C /* Dictionaries */,
 				B5E8F7101A4375C300BA4D2E /* thirdparty */,
 			);
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54587261A45ACE0003FEA3C /* Dictionaries in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

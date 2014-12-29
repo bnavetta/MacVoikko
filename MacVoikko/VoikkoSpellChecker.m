@@ -38,23 +38,47 @@
 //		[languages addObject:languageName];
 //	}
 //	return languages;
-	return [CocoaVoikko spellingLanguagesAtPath:nil];
+	return [CocoaVoikko spellingLanguages];
+}
+
+- (NSArray *)spellServer:(NSSpellServer *)sender suggestGuessesForWord:(NSString *)word inLanguage:(NSString *)language
+{
+	NSString* languageName = [VoikkoSpellChecker languageName:language];
+	NSLog(@"Finding suggestions for '%@' in %@ (%@)", word, languageName, language);
+	
+	CocoaVoikko* handle = self.handles[languageName];
+	if(handle != nil)
+	{
+		return [handle suggestionsForWord:word];
+	}
+	else
+	{
+		NSLog(@"Unknown language: %@", language);
+		return [NSArray array];
+	}
 }
 
 - (NSRange)spellServer:(NSSpellServer *)sender findMisspelledWordInString:(NSString *)stringToCheck language:(NSString *)language wordCount:(NSInteger *)wordCount countOnly:(BOOL)countOnly
 {
 	NSString* languageName = [VoikkoSpellChecker languageName:language];
-	NSLog(@"Find misspelled word in '%@' (language %@, %@)", stringToCheck, language, languageName);
+	NSLog(@"Finding misspelled word in '%@' (language %@, %@)", stringToCheck, language, languageName);
 	
 	CocoaVoikko* handle = self.handles[languageName];
 	if(handle != nil)
 	{
+		if(countOnly)
+		{
+			*wordCount = [handle wordCount:stringToCheck];
+			return NSMakeRange(NSNotFound, 0);
+		}
+		
+		// TODO: handle user dictionary
 		return [handle nextMisspelledWord:stringToCheck wordCount:wordCount];
 	}
 	else
 	{
 		NSLog(@"Unknown language: %@", language);
-		return NSMakeRange(0, 0);
+		return NSMakeRange(NSNotFound, 0);
 	}
 }
 
@@ -62,14 +86,14 @@
 {
 	NSError* error = nil;
 	NSMutableDictionary* handles = [NSMutableDictionary dictionary];
-	for(NSString* languageCode in [CocoaVoikko spellingLanguagesAtPath:nil])
+	for(NSString* languageCode in [CocoaVoikko spellingLanguages])
 	{
 		NSString* languageName = [VoikkoSpellChecker languageName:languageCode];
 		CocoaVoikko* handle = [[CocoaVoikko alloc] initWithLangcode:languageCode error:&error];
 		
 		if(handle == nil)
 		{
-			NSLog(@"Unable to create Voikko handle for language %@", languageCode);
+			NSLog(@"Unable to create Voikko handle for language %@: %@", languageCode, error.localizedDescription);
 		}
 		else
 		{

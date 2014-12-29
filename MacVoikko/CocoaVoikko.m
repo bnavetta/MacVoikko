@@ -29,12 +29,15 @@
 
 - (instancetype)initWithLangcode:(NSString *)langCode error:(NSError *__autoreleasing *)error
 {
-	return [self initWithLangcode:langCode andPath:nil error:error];
+	return [self initWithLangcode:langCode andPath:[[[CocoaVoikko includedDictionariesPath] absoluteURL] path] error:error];
 }
 
 - (void)dealloc
 {
-	voikkoTerminate(handle);
+	if(handle)
+	{
+		voikkoTerminate(handle);
+	}
 }
 
 - (void)enumerateTokens:(NSString *)text withBlock:(TokenCallback)callback
@@ -44,11 +47,14 @@
 	size_t offset = 0;
 	size_t tokenLen = 0;
 	
-	while(textLen > 0)
+	enum voikko_token_type tokenType;
+	while(tokenType != TOKEN_NONE)
 	{
-		enum voikko_token_type tokenType = voikkoNextTokenCstr(handle, cText + offset, textLen, &tokenLen);
-		NSString* token = [[NSString alloc] initWithBytes:cText + offset length:tokenLen - offset encoding:NSUTF8StringEncoding];
-		BOOL keepGoing = callback(tokenType, token, NSMakeRange(offset, tokenLen));
+		tokenType = voikkoNextTokenCstr(handle, cText + offset, textLen, &tokenLen);
+		NSRange tokenRange = NSMakeRange(offset, tokenLen);
+		NSString* token = [text substringWithRange:tokenRange];
+		
+		BOOL keepGoing = callback(tokenType, token, tokenRange);
 	
 		offset += tokenLen;
 		
@@ -66,7 +72,7 @@
 
 - (NSRange)nextMisspelledWord:(NSString *)text wordCount:(NSInteger *)wordCount
 {
-	__block NSRange range;
+	__block NSRange range = NSMakeRange(NSNotFound, 0);
 	__block int wc = 0;
 	[self enumerateTokens:text withBlock:^BOOL(enum voikko_token_type tokenType, NSString* token, NSRange tokenLoc) {
 		if(tokenType == TOKEN_WORD)
@@ -101,6 +107,24 @@
 	return wc;
 }
 
+- (NSArray *)suggestionsForWord:(NSString *)word
+{
+	char** cSuggestions = voikkoSuggestCstr(handle, [word UTF8String]);
+	NSMutableArray* suggestions = [NSMutableArray array];
+	
+	if(cSuggestions)
+	{
+		for(char** suggestionPtr = cSuggestions; *suggestionPtr != NULL; suggestionPtr++)
+		{
+			NSString* suggestion = [NSString stringWithUTF8String:*suggestionPtr];
+			[suggestions addObject:suggestion];
+		}
+		voikkoFreeCstrArray(cSuggestions);
+	}
+	
+	return suggestions;
+}
+
 + (NSArray *)spellingLanguagesAtPath:(NSString*)path
 {
 	char** languageCodes = voikkoListSupportedSpellingLanguages(path == nil ? 0 : [path fileSystemRepresentation]);
@@ -113,6 +137,16 @@
 	voikkoFreeCstrArray(languageCodes);
 	
 	return languages;
+}
+
++ (NSArray*)spellingLanguages
+{
+	return [CocoaVoikko spellingLanguagesAtPath:[[[CocoaVoikko includedDictionariesPath] absoluteURL] path]];
+}
+
++ (NSURL*)includedDictionariesPath
+{
+	return [[[NSBundle mainBundle] resourceURL] URLByAppendingPathComponent:@"Dictionaries" isDirectory:YES];
 }
 
 @end
