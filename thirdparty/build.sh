@@ -45,7 +45,8 @@ if [[ ! -f build/lib/libvoikko.dylib ]]; then
 	cd corevoikko/libvoikko
 	[[ -f configure ]] || ./autogen.sh
 	# Don't look in /usr/local/lib/voikko for dictionaries
-	./configure --enable-hfst --prefix="$ROOT/build" --with-dictionary-path="/Library/Spelling"
+	./configure --enable-hfst --prefix="$ROOT/build" \
+	   --with-dictionary-path="~/Library/Spelling/voikko:/Library/Spelling/voikko:/usr/local/lib/voikko"
 	make all install
 	cd "$ROOT"
 	install_name_tool -id @rpath/libvoikko.dylib build/lib/libvoikko.1.dylib
