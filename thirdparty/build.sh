@@ -28,9 +28,9 @@ fi
 
 echo "\n** Building hfst-ospell **\n"
 
-if [[ ! -f hfst/hfst-ospell/hfst-ospell ]]; then
-	svn checkout svn://svn.code.sf.net/p/hfst/code/trunk hfst
-	cd hfst/hfst-ospell
+if [[ ! -f hfst-ospell/hfst-ospell ]]; then
+	svn checkout svn://svn.code.sf.net/p/hfst/code/trunk/hfst-ospell
+	cd hfst-ospell
 	[[ -f configure ]] || ./autogen.sh
 	./configure --prefix="$ROOT/build" --enable-zhfst --with-tinyxml2 --without-libxmlpp
 	make all install
@@ -44,8 +44,9 @@ echo "\n** Building libvoikko **\n"
 if [[ ! -f build/lib/libvoikko.dylib ]]; then
 	cd corevoikko/libvoikko
 	[[ -f configure ]] || ./autogen.sh
-	# Don't look in /usr/local/lib/voikko for dictionaries
-	./configure --enable-hfst --prefix="$ROOT/build" -with-dictionary-path=/Library/Spelling
+	# Look in both /usr/local/lib/voikko and /Library/Spelling/voikko for dictionaries
+	./configure --enable-hfst --prefix="$ROOT/build" \
+	   --with-dictionary-path="/usr/local/lib/voikko:/Library/Spelling/voikko"
 	make all install
 	cd "$ROOT"
 	install_name_tool -id @rpath/libvoikko.dylib build/lib/libvoikko.1.dylib
