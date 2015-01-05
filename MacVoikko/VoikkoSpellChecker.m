@@ -61,12 +61,12 @@
 - (NSRange)spellServer:(NSSpellServer *)sender findMisspelledWordInString:(NSString *)stringToCheck language:(NSString *)language wordCount:(NSInteger *)wordCount countOnly:(BOOL)countOnly
 {
 	NSString* languageName = [VoikkoSpellChecker languageName:language];
-	NSLog(@"Finding misspelled word in '%@' (language %@, %@)", stringToCheck, language, languageName);
+	NSLog(@"Finding %@ in %@ - '%@'", countOnly ? @"word count" : @"spelling and word count", language, stringToCheck);
 	
 	CocoaVoikko* handle = self.handles[languageName];
 	if(handle != nil)
 	{
-		if(countOnly)
+		if(countOnly == YES)
 		{
 			*wordCount = [handle wordCount:stringToCheck];
 			return NSMakeRange(NSNotFound, 0);

@@ -52,11 +52,14 @@
 	size_t tokenLen = 0; // voikko returns token length in characters
 	
 	enum voikko_token_type tokenType;
-	while (tokenType != TOKEN_NONE)
-	{
+	do {
 		tokenType = voikkoNextTokenCstr(handle, byteString + byteOffset, byteLen - byteOffset, &tokenLen);
 		NSRange tokenRange = NSMakeRange(charOffset, tokenLen);
 		NSString* token = [text substringWithRange:tokenRange];
+		
+#ifdef DEBUG
+		NSLog(@"Token of type %d in %@ - '%@'", tokenType, NSStringFromRange(tokenRange), token);
+#endif
 		BOOL keepGoing = callback(tokenType, token, tokenRange);
 		
 		if(!keepGoing)
@@ -67,29 +70,7 @@
 		// https://github.com/walokra/osxspell/blob/6ab9f886dbf9763587af25cd5f7ed2ac9a92ef2b/VoikkoSpellService.m#L55
 		byteOffset += strlen([token UTF8String]);
 		charOffset += tokenLen;
-	}
-	
-//	const char* cText = [text UTF8String];
-//	size_t textLen = strlen(cText);
-//	size_t offset = 0;
-//	size_t tokenLen = 0;
-//	
-//	enum voikko_token_type tokenType;
-//	while(tokenType != TOKEN_NONE)
-//	{
-//		tokenType = voikkoNextTokenCstr(handle, cText + offset, textLen, &tokenLen);
-//		NSRange tokenRange = NSMakeRange(offset, tokenLen);
-//		NSString* token = [text substringWithRange:tokenRange];
-//		
-//		BOOL keepGoing = callback(tokenType, token, tokenRange);
-//	
-//		offset += tokenLen;
-//		
-//		if(!keepGoing)
-//		{
-//			break;
-//		}
-//	}
+	} while (tokenType != TOKEN_NONE);
 }
 
 - (int)checkSpelling:(NSString *)word
