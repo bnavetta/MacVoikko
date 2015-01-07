@@ -111,7 +111,21 @@
 + (NSString*)languageName:(NSString*)code
 {
 	NSLocale* enLocale = [NSLocale localeWithLocaleIdentifier:@"en"];
-	return [enLocale displayNameForKey:NSLocaleIdentifier value:code];
+    NSString* languageName = [enLocale displayNameForKey:NSLocaleIdentifier value:code];
+    if (languageName == nil)
+    {
+#ifdef DEBUG
+        NSLog(@"Unable to get language name for code: %@", code);
+#endif
+        return code;
+    }
+    else
+    {
+#ifdef DEBUG
+        NSLog(@"Got language name '%@' for code: %@", languageName, code);
+#endif
+        return languageName;
+    }
 }
 
 @end
