@@ -39,9 +39,7 @@
 			<string>MacVoikko</string>
 			<key>NSLanguages</key>
 			<array>
-				<!--<string>en</string>-->
-				<!--<string>fi</string>-->
-				<string>es</string>
+				<string>fi</string>
 			</array>
 			<key>NSMenuItem</key>
 			<dict/>

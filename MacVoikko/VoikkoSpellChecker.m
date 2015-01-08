@@ -44,7 +44,9 @@
 - (NSArray *)spellServer:(NSSpellServer *)sender suggestGuessesForWord:(NSString *)word inLanguage:(NSString *)language
 {
 	NSString* languageName = [VoikkoSpellChecker languageName:language];
+#ifdef DEBUG
 	NSLog(@"Finding suggestions for '%@' in %@ (%@)", word, languageName, language);
+#endif
 	
 	CocoaVoikko* handle = self.handles[languageName];
 	if(handle != nil)
@@ -53,7 +55,7 @@
 	}
 	else
 	{
-		NSLog(@"Unknown language: %@", language);
+		NSLog(@"Get suggestions - unknown language: %@", language);
 		return [NSArray array];
 	}
 }
@@ -61,7 +63,9 @@
 - (NSRange)spellServer:(NSSpellServer *)sender findMisspelledWordInString:(NSString *)stringToCheck language:(NSString *)language wordCount:(NSInteger *)wordCount countOnly:(BOOL)countOnly
 {
 	NSString* languageName = [VoikkoSpellChecker languageName:language];
+#ifdef DEBUG
 	NSLog(@"Finding %@ in %@ - '%@'", countOnly ? @"word count" : @"spelling and word count", language, stringToCheck);
+#endif
 	
 	CocoaVoikko* handle = self.handles[languageName];
 	if(handle != nil)
@@ -77,7 +81,7 @@
 	}
 	else
 	{
-		NSLog(@"Unknown language: %@", language);
+		NSLog(@"Find misspellings - unknown language: %@", language);
 		return NSMakeRange(NSNotFound, 0);
 	}
 }
@@ -107,7 +111,21 @@
 + (NSString*)languageName:(NSString*)code
 {
 	NSLocale* enLocale = [NSLocale localeWithLocaleIdentifier:@"en"];
-	return [enLocale displayNameForKey:NSLocaleIdentifier value:code];
+    NSString* languageName = [enLocale displayNameForKey:NSLocaleIdentifier value:code];
+    if (languageName == nil)
+    {
+#ifdef DEBUG
+        NSLog(@"Unable to get language name for code: %@", code);
+#endif
+        return code;
+    }
+    else
+    {
+#ifdef DEBUG
+        NSLog(@"Got language name '%@' for code: %@", languageName, code);
+#endif
+        return languageName;
+    }
 }
 
 @end
